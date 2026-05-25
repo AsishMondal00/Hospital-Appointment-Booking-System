@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f9ff;
+}
+
+.appointment-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.appointment-card {
+  width: 100%;
+  max-width: 650px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.appointment-card h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0d6efd;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row .input-group {
+  flex: 1;
+}
+
+.main-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #0d6efd;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background: #0056d2;
+}
+
+.otp-section,
+.payment-section,
+.success-section {
+  text-align: center;
+}
+
+.otp-input {
+  width: 100%;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.payment-card {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #f8fbff;
+}
+
+.payment-options {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.payment-options label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.summary-box {
+  margin-top: 20px;
+  background: #f4f9ff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.summary-box p {
+  margin-bottom: 10px;
+}
+
+@media(max-width: 600px) {
+
+  .appointment-card {
+    padding: 25px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}

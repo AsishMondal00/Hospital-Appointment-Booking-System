@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './authpage.css';
 
 function AuthPage() {
+  const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);
 
   const [loginData, setLoginData] = useState({
@@ -17,7 +19,7 @@ function AuthPage() {
     password: '',
     confirmPassword: '',
   });
-
+//login i/p changer handling
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
 
@@ -26,7 +28,7 @@ function AuthPage() {
       [name]: value,
     });
   };
-
+//register i/p changer handling
   const handleRegisterChange = (e) => {
     const { name, value } = e.target;
 
@@ -35,14 +37,14 @@ function AuthPage() {
       [name]: value,
     });
   };
-
+//login form submit handling
   const handleLoginSubmit = (e) => {
     e.preventDefault();
 
     console.log('Login Data:', loginData);
     alert('Login Successful');
   };
-
+//register form submit handling
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
 
@@ -53,6 +55,9 @@ function AuthPage() {
 
     console.log('Register Data:', registerData);
     alert('Account Created Successfully');
+
+//redirect to index page after successful registration
+    Navigate('/index');
   };
 
   return (

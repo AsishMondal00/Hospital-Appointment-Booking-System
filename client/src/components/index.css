@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #a8de97;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 7%;
+  background: rgb(14, 86, 15);
+  box-shadow: 0 2px 10px rgba(162, 147, 147, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  background: #0d6efd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.logo-section h2 {
+  color: #5383cc;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.appointment-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #0d6efd;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-btn img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid #d5e6d7;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 220px;
+  background: rgb(254, 255, 254);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  text-decoration: none;
+  color: #130843;
+  border-radius: 8px;
+}
+
+.dropdown-menu a:hover {
+  background: #8793b3;
+}
+
+.logout {
+  color: red !important;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 7%;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.hero-content span {
+  color: #7390bb;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #6483d0;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  /* color: #0d6efd; */
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #0d6efd;
+  color: white;
+}
+
+.secondary-btn {
+  background: white;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.stats-section,
+.service-container,
+.doctor-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.stats-section {
+  padding: 40px 7%;
+}
+
+.stat-card,
+.service-card,
+.doctor-card {
+  background: rgb(43, 96, 152);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.stat-icon,
+.service-icon {
+  font-size: 40px;
+  color: #0d6efd;
+  margin-bottom: 15px;
+}
+
+.services,
+.doctors {
+  padding: 80px 7%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.doctor-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.footer {
+  background: #0d1b2a;
+  color: white;
+  padding-top: 50px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 30px;
+  padding: 0 7% 40px;
+}
+
+.footer-content ul {
+  list-style: none;
+}
+
+.footer-content li {
+  margin-bottom: 10px;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+}
+
+@media(max-width: 992px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .appointment-btn {
+    display: none;
+  }
+}
+
+@media(max-width: 600px) {
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+}

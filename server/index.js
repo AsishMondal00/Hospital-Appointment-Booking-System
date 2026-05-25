@@ -11,7 +11,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
 
-app.use(cors({ origin: clientUrl }));
+const allowAll = process.env.ALLOW_ALL_ORIGINS === 'true';
+app.use(allowAll ? cors() : cors({ origin: clientUrl }));
 app.use(express.json());
 
 app.get('/', (request, response) => {
@@ -30,6 +31,7 @@ app.use((error, request, response, next) => {
 
 connectDB();
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+const host = process.env.HOST || '0.0.0.0';
+app.listen(port, host, () => {
+  console.log(`Server running on http://${host}:${port}`);
 });
